@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <!-- Android WebView optimized -->
-    <title>Ashish Unlimited Shorts · 30 टैब</title>
+    <title>Ashish Unlimited Shorts · 30 टैब · जीरो लैग</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <!-- Font Awesome 6 -->
@@ -31,18 +31,16 @@
             --text-light: #f0f0fc;
             --text-dim: #c0c0e0;
             --shadow-dark: rgba(0, 0, 0, 0.4);
-            --ripple-base: rgba(178, 132, 240, 0.4);
-            --transition-smooth: all 0.25s cubic-bezier(0.2, 0, 0, 1);
+            --transition-smooth: all 0.2s ease;
         }
 
         body {
             background: linear-gradient(145deg, var(--bg-dark-start), var(--bg-dark-end));
             min-height: 100vh;
-            padding: 12px;
+            padding: 10px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            transition: background 0.4s ease;
         }
 
         .app-wrapper {
@@ -53,15 +51,15 @@
         /* ---------- GLASS HEADER ---------- */
         .glass-header {
             background: var(--glass-bg);
-            backdrop-filter: blur(16px) saturate(180%);
+            backdrop-filter: blur(16px);
             border: 1px solid rgba(255,255,255,0.08);
             border-radius: 24px;
-            padding: 10px 18px;
-            margin-bottom: 14px;
+            padding: 8px 16px;
+            margin-bottom: 12px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            box-shadow: 0 10px 22px rgba(0,0,0,0.3), 0 0 14px var(--purple-glow);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3), 0 0 14px var(--purple-glow);
         }
 
         .app-title {
@@ -78,7 +76,7 @@
 
         .app-title h1 {
             font-weight: 700;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             background: linear-gradient(130deg, #d6b4ff, #a0d0ff);
             -webkit-background-clip: text;
             background-clip: text;
@@ -88,30 +86,29 @@
         .counter-dashboard {
             background: rgba(10, 10, 20, 0.5);
             backdrop-filter: blur(8px);
-            padding: 8px 16px;
+            padding: 6px 14px;
             border-radius: 30px;
             border: 1px solid rgba(95, 168, 255, 0.3);
-            box-shadow: 0 0 12px var(--blue-glow);
             color: white;
             display: flex;
             align-items: center;
             gap: 6px;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
         }
 
-        /* ---------- CONTROL PANEL ---------- */
+        /* ---------- कंट्रोल पैनल - अल्ट्रा लाइट ---------- */
         .control-panel {
             background: var(--glass-bg);
             backdrop-filter: blur(14px);
             border-radius: 24px;
-            padding: 14px 18px;
-            margin-bottom: 14px;
+            padding: 12px 16px;
+            margin-bottom: 12px;
             border: 1px solid rgba(178,132,240,0.3);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.3), 0 0 16px var(--purple-glow);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.3);
             display: flex;
             flex-wrap: wrap;
             align-items: center;
-            gap: 14px;
+            gap: 12px;
         }
 
         .global-url-section {
@@ -119,9 +116,9 @@
             display: flex;
             flex-wrap: wrap;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
             background: rgba(0,0,0,0.2);
-            padding: 5px 14px;
+            padding: 4px 12px;
             border-radius: 40px;
         }
 
@@ -131,30 +128,29 @@
             background: rgba(0,0,0,0.4);
             border: 1px solid var(--neon-purple);
             border-radius: 40px;
-            padding: 10px 18px;
+            padding: 8px 16px;
             color: white;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             outline: none;
         }
 
         .global-load-btn {
             background: linear-gradient(145deg, #7c4dff, #5fa8ff);
             border: none;
-            padding: 10px 22px;
+            padding: 8px 20px;
             border-radius: 40px;
             color: white;
             font-weight: 600;
             display: flex;
             align-items: center;
-            gap: 8px;
-            box-shadow: 0 0 18px var(--purple-glow);
+            gap: 6px;
             cursor: pointer;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
         }
 
         .panel-controls {
             display: flex;
-            gap: 10px;
+            gap: 8px;
         }
 
         .input-group {
@@ -168,31 +164,32 @@
         .input-group i {
             padding: 0 8px;
             color: var(--neon-purple);
+            font-size: 0.8rem;
         }
 
         #panelCount {
-            width: 65px;
+            width: 60px;
             background: rgba(10, 5, 20, 0.6);
             border: none;
-            padding: 9px 4px;
+            padding: 8px 4px;
             border-radius: 40px;
             color: white;
             text-align: center;
             outline: none;
+            font-size: 0.9rem;
         }
 
         .neon-btn {
             background: rgba(20, 15, 35, 0.8);
             border: 1px solid var(--neon-purple);
-            padding: 9px 18px;
+            padding: 8px 16px;
             border-radius: 40px;
             color: white;
             display: flex;
             align-items: center;
-            gap: 8px;
-            box-shadow: 0 0 10px var(--purple-glow);
+            gap: 6px;
             cursor: pointer;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
         }
 
         /* ---------- COMPACT MODE ---------- */
@@ -200,79 +197,63 @@
             display: none !important;
         }
 
-        /* ---------- VIDEO GRID - 30 टैब शॉर्ट्स फीड ---------- */
+        /* ---------- वीडियो ग्रिड - सुपर फास्ट ---------- */
         .video-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 12px;
-            margin-top: 6px;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 10px;
+            margin-top: 5px;
         }
 
-        /* ---------- शॉर्ट्स कार्ड - 9:16 ASPECT RATIO ---------- */
+        /* ---------- शॉर्ट्स कार्ड - हल्का और तेज ---------- */
         .panel-card {
             background: var(--card-bg);
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(8px);
             border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 18px;
-            padding: 12px;
-            box-shadow: 0 8px 16px -10px rgba(0,0,0,0.4), 0 0 10px var(--purple-glow);
+            border-radius: 16px;
+            padding: 8px;
+            box-shadow: 0 6px 12px -8px rgba(0,0,0,0.4);
             display: flex;
             flex-direction: column;
             position: relative;
-            animation: floatIn 0.25s ease;
-        }
-
-        .panel-card:hover {
-            transform: translateY(-3px);
-            border-color: var(--neon-blue);
-            box-shadow: 0 14px 22px -12px #000, 0 0 16px var(--blue-glow);
-        }
-
-        @keyframes floatIn {
-            0% { opacity: 0; transform: translateY(8px); }
-            100% { opacity: 1; transform: translateY(0); }
+            contain: content; /* Performance optimization */
+            will-change: transform; /* GPU acceleration */
         }
 
         .panel-header {
             display: flex;
-            gap: 5px;
+            gap: 4px;
             align-items: center;
             justify-content: flex-end;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .icon-btn {
             background: rgba(30, 20, 45, 0.7);
             border: none;
             border-radius: 50%;
-            width: 28px;
-            height: 28px;
+            width: 26px;
+            height: 26px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             backdrop-filter: blur(4px);
             border: 1px solid rgba(255,255,255,0.1);
             cursor: pointer;
         }
 
-        .icon-btn:hover {
-            background: rgba(178, 132, 240, 0.25);
-            border-color: var(--neon-blue);
-            box-shadow: 0 0 12px var(--blue-glow);
-        }
-
-        /* ---------- शॉर्ट्स कंटेनर - 9:16 फीड ---------- */
+        /* ---------- वीडियो कंटेनर - 9:16 फिक्स ---------- */
         .iframe-container {
             position: relative;
             width: 100%;
-            padding-bottom: 177.78%; /* 9:16 Aspect Ratio */
-            background: #0a0a12;
-            border-radius: 14px;
+            padding-bottom: 177.78%;
+            background: #000;
+            border-radius: 12px;
             overflow: hidden;
             border: 1px solid rgba(255,255,255,0.08);
-            margin-top: 2px;
+            contain: strict; /* Performance boost */
         }
 
         .iframe-container iframe {
@@ -282,126 +263,56 @@
             width: 100%;
             height: 100%;
             border: 0;
-            pointer-events: auto; /* यूजर इंटरैक्शन के लिए */
+            pointer-events: auto;
         }
 
-        /* ---------- शॉर्ट्स फीड बैज ---------- */
+        /* ---------- सिर्फ एक बैज - बाकी हटाए ---------- */
         .shorts-feed-badge {
             background: rgba(255, 0, 0, 0.8);
-            border: 1px solid #ff3366;
             border-radius: 12px;
-            padding: 4px 10px;
-            font-size: 0.65rem;
+            padding: 3px 8px;
+            font-size: 0.55rem;
             color: white;
             position: absolute;
-            top: 8px;
-            left: 8px;
-            z-index: 999;
-            backdrop-filter: blur(4px);
-            font-weight: 600;
+            top: 5px;
+            left: 5px;
+            z-index: 10;
             display: flex;
             align-items: center;
-            gap: 4px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-        }
-
-        /* ---------- व्यू काउंट सिम्युलेटर ---------- */
-        .view-counter-badge {
-            background: rgba(0, 0, 0, 0.7);
-            border: 1px solid #00ff88;
-            border-radius: 20px;
-            padding: 4px 12px;
-            font-size: 0.65rem;
-            color: #00ff88;
-            position: absolute;
-            bottom: 8px;
-            right: 8px;
-            z-index: 999;
-            backdrop-filter: blur(4px);
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0% { opacity: 0.9; }
-            50% { opacity: 1; box-shadow: 0 0 10px #00ff88; }
-            100% { opacity: 0.9; }
-        }
-
-        /* ---------- ड्रैग ड्रॉप ---------- */
-        .dragging {
-            opacity: 0.4;
-            transform: scale(0.96);
-            box-shadow: 0 0 35px var(--neon-blue);
-        }
-
-        .drag-over {
-            border: 2px dashed var(--neon-purple);
-            background: rgba(178,132,240,0.1);
+            gap: 3px;
+            pointer-events: none;
         }
 
         /* ---------- रिस्पॉन्सिव ---------- */
         @media (max-width: 768px) {
-            .video-grid {
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-                gap: 10px;
-            }
+            .video-grid { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 8px; }
         }
-
         @media (max-width: 480px) {
-            .video-grid {
-                grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-                gap: 8px;
-            }
+            .video-grid { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 6px; }
         }
 
-        .unlimited-badge {
-            background: rgba(178, 132, 240, 0.3);
-            border-radius: 16px;
-            padding: 3px 10px;
-            font-size: 0.7rem;
-            color: white;
-            border: 1px solid var(--neon-purple);
-            margin-left: 8px;
+        /* ---------- लोडिंग स्टेट ---------- */
+        .loading-placeholder {
+            background: linear-gradient(90deg, #1a1a2e 25%, #2a2a3e 50%, #1a1a2e 75%);
+            background-size: 200% 100%;
+            animation: loading 1.5s infinite;
         }
         
-        /* शॉर्ट्स फीड इंडिकेटर */
-        .feed-indicator {
-            background: rgba(255, 0, 0, 0.9);
-            color: white;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.7rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-            margin-left: 10px;
-            border: 1px solid #ffaa00;
-            animation: glow 1.5s infinite;
-        }
-        
-        @keyframes glow {
-            0% { box-shadow: 0 0 5px #ff3300; }
-            50% { box-shadow: 0 0 15px #ff3300; }
-            100% { box-shadow: 0 0 5px #ff3300; }
+        @keyframes loading {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
         }
     </style>
 </head>
-<body class="theme-neon-dark">
+<body>
     <div class="app-wrapper">
         <!-- Ashish Unlimited Shorts Header -->
         <header class="glass-header">
             <div class="app-title">
                 <i class="fas fa-bolt"></i>
                 <h1>Ashish Unlimited Shorts</h1>
-                <span class="unlimited-badge">30 टैब</span>
-                <span class="feed-indicator"><i class="fas fa-fire"></i> SHORTS FEED ACTIVE</span>
             </div>
-            <div class="counter-dashboard" id="panelCounterDashboard">
+            <div class="counter-dashboard">
                 <i class="fas fa-layer-group"></i>
                 <span id="activePanelsText">0 / 30</span>
             </div>
@@ -414,27 +325,27 @@
         <div class="control-panel" id="mainControlPanel">
             <div class="global-url-section">
                 <i class="fas fa-link" style="color: var(--neon-purple);"></i>
-                <input type="text" id="globalUrlInput" class="global-url-input" placeholder="YouTube Shorts URL डालें... SHORTS FEED में काउंट होगा">
+                <input type="text" id="globalUrlInput" class="global-url-input" placeholder="Shorts URL डालें...">
                 <button class="global-load-btn" id="globalLoadBtn">
-                    <i class="fas fa-play-circle"></i> शॉर्ट्स फीड लोड करें
+                    <i class="fas fa-play"></i> लोड करें
                 </button>
             </div>
             
             <div class="panel-controls">
                 <div class="input-group">
                     <i class="fas fa-hashtag"></i>
-                    <input type="number" id="panelCount" min="1" max="30" value="30" placeholder="1-30">
+                    <input type="number" id="panelCount" min="1" max="30" value="30">
                 </div>
-                <button class="neon-btn ripple" id="generateBtn">
-                    <i class="fas fa-magic"></i> 30 टैब
+                <button class="neon-btn" id="generateBtn">
+                    <i class="fas fa-magic"></i> 30
                 </button>
-                <button class="neon-btn ripple" id="compactToggleBtn">
-                    <i class="fas fa-compress-alt"></i> कॉम्पैक्ट
+                <button class="neon-btn" id="compactToggleBtn">
+                    <i class="fas fa-compress-alt"></i>
                 </button>
             </div>
         </div>
 
-        <!-- Grid Container - 30 Shorts Panels -->
+        <!-- Grid Container -->
         <div id="videoGridContainer" class="video-grid"></div>
     </div>
 
@@ -442,16 +353,13 @@
         (function() {
             "use strict";
 
-            // State Variables
+            // ---------- सुपर फास्ट कॉन्फिग ----------
+            const MAX_PANELS = 30;
             let panelsData = [];
             let panelCounter = 0;
-            const MAX_PANELS = 30;
-            let isCompact = false;
-            let isNeonDark = true;
-            let globalVideoUrl = '';
-            let videoId = '';
-
-            // DOM References
+            let globalVideoId = '';
+            
+            // DOM रेफरेंसेस
             const gridContainer = document.getElementById('videoGridContainer');
             const panelCountInput = document.getElementById('panelCount');
             const generateBtn = document.getElementById('generateBtn');
@@ -461,134 +369,69 @@
             const globalUrlInput = document.getElementById('globalUrlInput');
             const globalLoadBtn = document.getElementById('globalLoadBtn');
 
-            // ---------- शॉर्ट्स ID एक्सट्रैक्टर ----------
-            function extractShortsId(url) {
+            // ---------- FAST: सिर्फ वीडियो ID निकालो ----------
+            function extractVideoId(url) {
                 if (!url) return null;
                 
-                // शॉर्ट्स URL पैटर्न
-                const shortsPattern = /youtube\.com\/shorts\/([a-zA-Z0-9_-]{11})/;
-                const youtuBePattern = /youtu\.be\/([a-zA-Z0-9_-]{11})/;
-                const watchPattern = /youtube\.com\/watch\?v=([a-zA-Z0-9_-]{11})/;
-                
-                let match = url.match(shortsPattern);
+                // शॉर्ट्स URL
+                let match = url.match(/youtube\.com\/shorts\/([a-zA-Z0-9_-]{11})/);
                 if (match) return match[1];
                 
-                match = url.match(youtuBePattern);
+                // वॉच URL
+                match = url.match(/youtube\.com\/watch\?v=([a-zA-Z0-9_-]{11})/);
                 if (match) return match[1];
                 
-                match = url.match(watchPattern);
+                // यूटू.बी
+                match = url.match(/youtu\.be\/([a-zA-Z0-9_-]{11})/);
                 if (match) return match[1];
                 
-                try {
-                    const urlObj = new URL(url);
-                    return urlObj.searchParams.get('v');
-                } catch (e) {}
+                // एम्बेड
+                match = url.match(/youtube\.com\/embed\/([a-zA-Z0-9_-]{11})/);
+                if (match) return match[1];
                 
                 return null;
             }
 
-            // ---------- शॉर्ट्स फीड एम्बेड (External View नहीं, Shorts Feed में Count होगा) ----------
-            function getShortsEmbedUrl(url) {
-                const id = extractShortsId(url);
-                if (!id) return url;
-                
-                videoId = id;
-                
-                // ⚠️⚠️⚠️ क्रिटिकल: यह पैरामीटर SET करते हैं कि व्यू Shorts Feed में Count हो ⚠️⚠️⚠️
-                // यूज़र-एजेंट और रेफरर से YouTube समझता है कि यह Shorts Feed है
-                return `https://www.youtube.com/embed/${id}?autoplay=1&mute=1&loop=1&playlist=${id}&rel=0&controls=1&modestbranding=0&playsinline=1&enablejsapi=1&origin=${encodeURIComponent(window.location.origin)}&widget_referrer=shorts_feed&fs=1&iv_load_policy=3&color=red&disablekb=0&hl=en`;
+            // ---------- FAST: शॉर्ट्स एम्बेड URL (मिनिमल पैरामीटर) ----------
+            function getEmbedUrl(videoId) {
+                // सिर्फ जरूरी पैरामीटर - बाकी हटाए
+                return `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&controls=0&modestbranding=1&rel=0&iv_load_policy=3&disablekb=1&fs=0&playsinline=1`;
             }
 
-            // ---------- व्यू काउंट सिम्युलेटर (दिखाने के लिए) ----------
-            function startViewCounterSimulation(panel) {
-                const container = panel.querySelector('.iframe-container');
-                if (!container) return;
-                
-                // व्यू काउंट बैज हटाएं अगर पहले से है
-                const oldBadge = panel.querySelector('.view-counter-badge');
-                if (oldBadge) oldBadge.remove();
-                
-                // नया बैज बनाएं
-                const viewBadge = document.createElement('span');
-                viewBadge.className = 'view-counter-badge';
-                
-                // रैंडम व्यू काउंट दिखाने के लिए (सिर्फ UI के लिए)
-                let viewCount = Math.floor(Math.random() * 1000) + 500;
-                viewBadge.innerHTML = `<i class="fas fa-eye"></i> ${viewCount}+ • SHORTS FEED`;
-                container.appendChild(viewBadge);
-                
-                // हर 30 सेकंड में व्यू बढ़ाएं (सिर्फ UI)
-                setInterval(() => {
-                    if (panel && panel.isConnected) {
-                        const badge = panel.querySelector('.view-counter-badge');
-                        if (badge) {
-                            let currentViews = parseInt(badge.innerHTML.replace(/[^0-9]/g, ''));
-                            if (isNaN(currentViews)) currentViews = 1000;
-                            currentViews += Math.floor(Math.random() * 50) + 20;
-                            badge.innerHTML = `<i class="fas fa-eye"></i> ${currentViews}+ • SHORTS FEED`;
-                        }
-                    }
-                }, 30000);
-            }
-
-            // ---------- सभी पैनल में शॉर्ट्स फीड लोड करें ----------
-            function loadShortsToAllPanels(url) {
-                if (!url || url.trim() === '') {
-                    alert('YouTube Shorts URL डालें');
+            // ---------- FAST: एक साथ सब पैनल लोड करो ----------
+            function loadVideoToAllPanels(url) {
+                const videoId = extractVideoId(url);
+                if (!videoId) {
+                    alert('सही YouTube Shorts URL डालें');
                     return;
                 }
                 
-                const embedUrl = getShortsEmbedUrl(url);
-                const id = extractShortsId(url);
+                globalVideoId = videoId;
+                const embedUrl = getEmbedUrl(videoId);
                 
-                if (!id) {
-                    alert('यह YouTube Shorts URL नहीं है। कृपया सही Shorts URL डालें।');
-                    return;
-                }
-                
-                globalVideoUrl = url;
-                
-                // सभी iframes में URL सेट करें
+                // सभी iframes एक साथ लोड करो
                 const iframes = document.querySelectorAll('.panel-card iframe');
-                iframes.forEach(iframe => {
+                for (let i = 0; i < iframes.length; i++) {
+                    const iframe = iframes[i];
                     iframe.src = embedUrl;
                     iframe.dataset.src = embedUrl;
-                });
+                }
                 
-                // पैनल्स अपडेट करें
-                const panels = document.querySelectorAll('.panel-card');
-                panels.forEach(panel => {
-                    // शॉर्ट्स क्लास हमेशा लगाएं
-                    panel.classList.add('shorts-mode');
-                    
-                    // शॉर्ट्स फीड बैज जोड़ें
-                    let shortsFeedBadge = panel.querySelector('.shorts-feed-badge');
-                    if (!shortsFeedBadge) {
-                        shortsFeedBadge = document.createElement('span');
-                        shortsFeedBadge.className = 'shorts-feed-badge';
-                        shortsFeedBadge.innerHTML = '<i class="fas fa-bolt"></i> YT SHORTS FEED • काउंट हो रहा है';
-                        panel.querySelector('.iframe-container').appendChild(shortsFeedBadge);
-                    }
-                    
-                    // व्यू काउंट सिम्युलेशन शुरू करें
-                    startViewCounterSimulation(panel);
-                });
+                // डेटा सेव करो
+                for (let i = 0; i < panelsData.length; i++) {
+                    panelsData[i].url = url;
+                    panelsData[i].videoId = videoId;
+                }
                 
-                // डेटा सेव करें
-                panelsData.forEach(panel => {
-                    panel.url = url;
-                    panel.videoType = 'shorts';
-                });
-                
-                saveLayoutToLocal();
+                saveToStorage();
             }
 
-            // ---------- पैनल HTML जनरेट करें (सिर्फ शॉर्ट्स के लिए) ----------
-            function generatePanelHTML(panelId, savedUrl = '', orderIdx = 0) {
-                const embedUrl = savedUrl ? getShortsEmbedUrl(savedUrl) : '';
+            // ---------- FAST: पैनल HTML (अल्ट्रा लाइट) ----------
+            function generatePanelHTML(panelId, videoId = '', orderIdx = 0) {
+                const embedUrl = videoId ? getEmbedUrl(videoId) : '';
                 
                 return `
-                    <div class="panel-card shorts-mode" draggable="true" data-panel-id="${panelId}" data-order="${orderIdx}">
+                    <div class="panel-card" draggable="true" data-panel-id="${panelId}" data-order="${orderIdx}">
                         <div class="panel-header">
                             <button class="icon-btn fullscreen-btn" title="फुलस्क्रीन">
                                 <i class="fas fa-expand"></i>
@@ -598,87 +441,88 @@
                             </button>
                         </div>
                         <div class="iframe-container">
-                            <iframe class="lazy-iframe" data-src="${embedUrl}" 
-                                frameborder="0" allowfullscreen 
-                                allow="autoplay; encrypted-media; picture-in-picture; loop; clipboard-write; accelerometer; gyroscope;"
-                                sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-presentation allow-popups-to-escape-sandbox allow-storage-access-by-user-activation">
+                            <iframe loading="lazy" data-src="${embedUrl}" 
+                                frameborder="0" 
+                                allow="autoplay; encrypted-media; picture-in-picture"
+                                sandbox="allow-same-origin allow-scripts allow-forms allow-presentation">
                             </iframe>
+                            <span class="shorts-feed-badge">
+                                <i class="fas fa-bolt"></i> SHORTS
+                            </span>
                         </div>
                     </div>
                 `;
             }
 
-            // ---------- ग्रिड रेंडर ----------
+            // ---------- FAST: ग्रिड रेंडर (इन्सर्ट करने का तेज तरीका) ----------
             function renderGrid() {
                 const sorted = [...panelsData].sort((a,b) => a.order - b.order);
                 let html = '';
-                sorted.forEach((panel, idx) => {
-                    html += generatePanelHTML(panel.id, panel.url, idx);
-                });
+                
+                for (let i = 0; i < sorted.length; i++) {
+                    const panel = sorted[i];
+                    html += generatePanelHTML(panel.id, panel.videoId, i);
+                }
+                
                 gridContainer.innerHTML = html;
-                updateCounterUI();
-                attachPanelEvents();
+                updateCounter();
+                attachEvents();
                 attachDragDrop();
                 lazyLoadIframes();
                 
-                // बैज और व्यू काउंटर जोड़ें
-                if (globalVideoUrl) {
+                // अगर वीडियो ID है तो लोड करो
+                if (globalVideoId) {
                     setTimeout(() => {
-                        const panels = document.querySelectorAll('.panel-card');
-                        panels.forEach(panel => {
-                            // शॉर्ट्स फीड बैज
-                            if (!panel.querySelector('.shorts-feed-badge') && panel.querySelector('.iframe-container')) {
-                                const shortsFeedBadge = document.createElement('span');
-                                shortsFeedBadge.className = 'shorts-feed-badge';
-                                shortsFeedBadge.innerHTML = '<i class="fas fa-bolt"></i> YT SHORTS FEED • काउंट हो रहा है';
-                                panel.querySelector('.iframe-container').appendChild(shortsFeedBadge);
-                            }
-                            
-                            // व्यू काउंटर
-                            startViewCounterSimulation(panel);
-                        });
-                    }, 200);
+                        const embedUrl = getEmbedUrl(globalVideoId);
+                        const iframes = document.querySelectorAll('.panel-card iframe');
+                        for (let i = 0; i < iframes.length; i++) {
+                            iframes[i].src = embedUrl;
+                        }
+                    }, 50);
                 }
             }
 
-            // ---------- पैनल काउंटर ----------
-            function updateCounterUI() {
+            // ---------- काउंटर अपडेट ----------
+            function updateCounter() {
                 const count = document.querySelectorAll('.panel-card').length;
                 activePanelsSpan.innerText = `${count} / 30`;
                 panelCountInput.value = count;
             }
 
-            // ---------- इवेंट हैंडलर ----------
-            function attachPanelEvents() {
-                document.querySelectorAll('.remove-btn').forEach(btn => {
-                    btn.removeEventListener('click', handleRemoveClick);
-                    btn.addEventListener('click', handleRemoveClick);
-                });
+            // ---------- इवेंट अटैच ----------
+            function attachEvents() {
+                const removeBtns = document.querySelectorAll('.remove-btn');
+                for (let i = 0; i < removeBtns.length; i++) {
+                    removeBtns[i].onclick = handleRemove;
+                }
                 
-                document.querySelectorAll('.fullscreen-btn').forEach(btn => {
-                    btn.removeEventListener('click', handleFullscreenClick);
-                    btn.addEventListener('click', handleFullscreenClick);
-                });
+                const fullscreenBtns = document.querySelectorAll('.fullscreen-btn');
+                for (let i = 0; i < fullscreenBtns.length; i++) {
+                    fullscreenBtns[i].onclick = handleFullscreen;
+                }
             }
 
-            function handleRemoveClick(e) {
+            function handleRemove(e) {
                 const panel = e.currentTarget.closest('.panel-card');
                 const panelId = panel.dataset.panelId;
                 panel.remove();
+                
+                // डेटा से हटाओ
                 panelsData = panelsData.filter(p => p.id != panelId);
                 
-                const remainingPanels = document.querySelectorAll('.panel-card');
-                remainingPanels.forEach((card, index) => {
-                    const id = card.dataset.panelId;
+                // ऑर्डर अपडेट करो
+                const remaining = document.querySelectorAll('.panel-card');
+                for (let i = 0; i < remaining.length; i++) {
+                    const id = remaining[i].dataset.panelId;
                     const data = panelsData.find(p => p.id == id);
-                    if (data) data.order = index;
-                });
+                    if (data) data.order = i;
+                }
                 
-                updateCounterUI();
-                saveLayoutToLocal();
+                updateCounter();
+                saveToStorage();
             }
 
-            function handleFullscreenClick(e) {
+            function handleFullscreen(e) {
                 const panel = e.currentTarget.closest('.panel-card');
                 panel.classList.toggle('fullscreen-mode');
                 const icon = e.currentTarget.querySelector('i');
@@ -688,27 +532,32 @@
             // ---------- ड्रैग ड्रॉप ----------
             function attachDragDrop() {
                 const cards = document.querySelectorAll('.panel-card');
-                cards.forEach(card => {
-                    card.addEventListener('dragstart', dragStart);
-                    card.addEventListener('dragend', dragEnd);
-                    card.addEventListener('dragover', dragOver);
-                    card.addEventListener('dragenter', dragEnter);
-                    card.addEventListener('dragleave', dragLeave);
-                    card.addEventListener('drop', dragDrop);
-                });
+                for (let i = 0; i < cards.length; i++) {
+                    const card = cards[i];
+                    card.draggable = true;
+                    card.ondragstart = dragStart;
+                    card.ondragend = dragEnd;
+                    card.ondragover = dragOver;
+                    card.ondragenter = dragEnter;
+                    card.ondragleave = dragLeave;
+                    card.ondrop = dragDrop;
+                }
             }
 
-            let dragSrcElement = null;
+            let dragSrc = null;
             function dragStart(e) {
                 this.classList.add('dragging');
-                dragSrcElement = this;
+                dragSrc = this;
                 e.dataTransfer.effectAllowed = 'move';
                 e.dataTransfer.setData('text/plain', this.dataset.panelId);
             }
             
             function dragEnd(e) {
                 this.classList.remove('dragging');
-                document.querySelectorAll('.panel-card').forEach(c => c.classList.remove('drag-over'));
+                const cards = document.querySelectorAll('.panel-card');
+                for (let i = 0; i < cards.length; i++) {
+                    cards[i].classList.remove('drag-over');
+                }
             }
             
             function dragOver(e) {
@@ -718,7 +567,7 @@
             
             function dragEnter(e) {
                 e.preventDefault();
-                if (this !== dragSrcElement) this.classList.add('drag-over');
+                if (this !== dragSrc) this.classList.add('drag-over');
             }
             
             function dragLeave(e) {
@@ -729,185 +578,158 @@
                 e.preventDefault();
                 this.classList.remove('drag-over');
                 
-                if (dragSrcElement && this !== dragSrcElement) {
+                if (dragSrc && this !== dragSrc) {
                     const allPanels = [...document.querySelectorAll('.panel-card')];
-                    const srcId = dragSrcElement.dataset.panelId;
+                    const srcId = dragSrc.dataset.panelId;
                     const targetId = this.dataset.panelId;
                     const srcData = panelsData.find(p => p.id == srcId);
                     const targetData = panelsData.find(p => p.id == targetId);
                     
                     if (srcData && targetData) {
-                        const tempOrder = srcData.order;
+                        const temp = srcData.order;
                         srcData.order = targetData.order;
-                        targetData.order = tempOrder;
+                        targetData.order = temp;
                     }
                     
                     renderGrid();
-                    saveLayoutToLocal();
-                    
-                    if (globalVideoUrl) {
-                        setTimeout(() => {
-                            loadShortsToAllPanels(globalVideoUrl);
-                        }, 50);
-                    }
+                    saveToStorage();
                 }
             }
 
-            // ---------- पैनल जनरेट ----------
+            // ---------- FAST: पैनल जनरेट (30 टैब) ----------
             function generatePanels(count) {
                 count = Math.min(MAX_PANELS, Math.max(1, count));
-                const currentCount = panelsData.length;
                 
-                if (count > currentCount) {
-                    for (let i = currentCount; i < count; i++) {
-                        panelCounter++;
-                        panelsData.push({
-                            id: panelCounter,
-                            url: globalVideoUrl || '',
-                            videoType: 'shorts',
-                            order: panelsData.length
-                        });
-                    }
-                } else if (count < currentCount) {
-                    panelsData = panelsData.slice(0, count);
+                // नया डेटा बनाओ
+                const newPanels = [];
+                for (let i = 0; i < count; i++) {
+                    panelCounter++;
+                    newPanels.push({
+                        id: panelCounter,
+                        videoId: globalVideoId || '',
+                        url: globalUrlInput.value || '',
+                        order: i
+                    });
                 }
                 
-                panelsData.forEach((p, idx) => { p.order = idx; });
+                panelsData = newPanels;
                 renderGrid();
-                saveLayoutToLocal();
-                
-                if (globalVideoUrl) {
-                    setTimeout(() => {
-                        loadShortsToAllPanels(globalVideoUrl);
-                    }, 100);
-                }
+                saveToStorage();
             }
 
             // ---------- लोकल स्टोरेज ----------
-            function saveLayoutToLocal() {
-                const panelsToStore = panelsData.map(p => ({ 
-                    id: p.id, 
-                    url: p.url, 
-                    order: p.order 
-                }));
-                localStorage.setItem('ashish_unlimited_shorts_30', JSON.stringify(panelsToStore));
-                localStorage.setItem('ashish_unlimited_shorts_theme', isNeonDark ? 'dark' : 'soft');
-                localStorage.setItem('ashish_unlimited_shorts_url', globalVideoUrl || '');
+            function saveToStorage() {
+                try {
+                    const store = panelsData.map(p => ({ 
+                        id: p.id, 
+                        videoId: p.videoId,
+                        order: p.order 
+                    }));
+                    localStorage.setItem('ashish_shorts_v3', JSON.stringify(store));
+                    localStorage.setItem('ashish_shorts_url', globalVideoId || '');
+                } catch(e) {}
             }
 
-            function restoreFromLocal() {
-                const stored = localStorage.getItem('ashish_unlimited_shorts_30');
-                if (stored) {
-                    try {
+            function restoreFromStorage() {
+                try {
+                    const stored = localStorage.getItem('ashish_shorts_v3');
+                    if (stored) {
                         panelsData = JSON.parse(stored);
                         panelCounter = panelsData.reduce((max, p) => Math.max(max, p.id), 0);
-                    } catch (e) {}
-                }
+                        
+                        // वीडियो ID रिस्टोर
+                        const savedVideoId = localStorage.getItem('ashish_shorts_url');
+                        if (savedVideoId) {
+                            globalVideoId = savedVideoId;
+                            globalUrlInput.value = `https://youtube.com/shorts/${savedVideoId}`;
+                        }
+                    }
+                } catch(e) {}
                 
+                // डिफ़ॉल्ट 30 पैनल
                 if (!panelsData || panelsData.length === 0) {
                     panelsData = [];
                     for (let i = 0; i < 30; i++) {
                         panelCounter++;
                         panelsData.push({ 
                             id: panelCounter, 
-                            url: '', 
-                            videoType: 'shorts',
+                            videoId: '',
+                            url: '',
                             order: i 
                         });
                     }
                 }
                 
-                const savedGlobalUrl = localStorage.getItem('ashish_unlimited_shorts_url');
-                if (savedGlobalUrl) {
-                    globalVideoUrl = savedGlobalUrl;
-                    globalUrlInput.value = savedGlobalUrl;
-                }
-                
-                const theme = localStorage.getItem('ashish_unlimited_shorts_theme');
-                if (theme === 'soft') {
-                    isNeonDark = false;
-                    document.body.classList.add('theme-soft');
-                    themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-                }
-                
                 renderGrid();
-                
-                if (globalVideoUrl) {
-                    setTimeout(() => {
-                        loadShortsToAllPanels(globalVideoUrl);
-                    }, 200);
-                }
             }
 
-            // ---------- लेजी लोड ----------
+            // ---------- FAST: लेजी लोड (इंटरसेक्शन ऑब्जर्वर) ----------
             function lazyLoadIframes() {
-                const iframes = document.querySelectorAll('.lazy-iframe');
+                const iframes = document.querySelectorAll('iframe[data-src]');
+                
                 const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
+                    for (let i = 0; i < entries.length; i++) {
+                        const entry = entries[i];
                         if (entry.isIntersecting) {
                             const iframe = entry.target;
                             const src = iframe.dataset.src;
                             if (src) {
                                 iframe.src = src;
-                                iframe.classList.remove('lazy-iframe');
-                                iframe.dataset.src = '';
+                                iframe.removeAttribute('data-src');
                             }
                             observer.unobserve(iframe);
                         }
-                    });
-                }, { rootMargin: '200px' });
+                    }
+                }, { 
+                    rootMargin: '50px', // पहले से लोड करो
+                    threshold: 0.01 
+                });
                 
-                iframes.forEach(iframe => observer.observe(iframe));
+                for (let i = 0; i < iframes.length; i++) {
+                    observer.observe(iframes[i]);
+                }
             }
 
             // ---------- कॉम्पैक्ट टॉगल ----------
             function toggleCompact() {
-                isCompact = !isCompact;
-                document.body.classList.toggle('compact', isCompact);
-                compactToggle.innerHTML = isCompact ? 
-                    '<i class="fas fa-expand-alt"></i> एक्सपैंड' : 
-                    '<i class="fas fa-compress-alt"></i> कॉम्पैक्ट';
+                document.body.classList.toggle('compact');
+                const btn = document.getElementById('compactToggleBtn');
+                btn.innerHTML = document.body.classList.contains('compact') ? 
+                    '<i class="fas fa-expand-alt"></i>' : 
+                    '<i class="fas fa-compress-alt"></i>';
             }
 
             // ---------- थीम टॉगल ----------
             function toggleTheme() {
-                isNeonDark = !isNeonDark;
-                if (isNeonDark) {
-                    document.body.classList.remove('theme-soft');
-                    themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-                } else {
-                    document.body.classList.add('theme-soft');
-                    themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-                }
-                saveLayoutToLocal();
+                document.body.classList.toggle('theme-soft');
+                const icon = themeToggle.querySelector('i');
+                icon.className = document.body.classList.contains('theme-soft') ? 'fas fa-sun' : 'fas fa-moon';
             }
 
-            // ---------- इनिशियलाइज़ेशन ----------
+            // ---------- इनिशियलाइज़ ----------
             window.addEventListener('load', function() {
-                restoreFromLocal();
+                restoreFromStorage();
                 
-                generateBtn.addEventListener('click', function() {
+                // बटन इवेंट
+                generateBtn.onclick = function() {
                     let count = parseInt(panelCountInput.value, 10);
                     if (isNaN(count) || count < 1) count = 1;
                     if (count > 30) count = 30;
                     generatePanels(count);
-                });
+                };
                 
-                globalLoadBtn.addEventListener('click', function() {
-                    loadShortsToAllPanels(globalUrlInput.value);
-                });
+                globalLoadBtn.onclick = function() {
+                    loadVideoToAllPanels(globalUrlInput.value);
+                };
                 
-                globalUrlInput.addEventListener('keypress', function(e) {
+                globalUrlInput.onkeypress = function(e) {
                     if (e.key === 'Enter') {
-                        loadShortsToAllPanels(globalUrlInput.value);
+                        loadVideoToAllPanels(globalUrlInput.value);
                     }
-                });
+                };
                 
-                compactToggle.addEventListener('click', toggleCompact);
-                themeToggle.addEventListener('click', toggleTheme);
-                
-                updateCounterUI();
-                lazyLoadIframes();
+                compactToggle.onclick = toggleCompact;
+                themeToggle.onclick = toggleTheme;
             });
         })();
     </script>
